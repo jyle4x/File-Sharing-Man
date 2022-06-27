@@ -107,3 +107,41 @@ def fsub_button(client, message):
         except IndexError:
             pass
         return buttons
+    if FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
+                InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
+            ],
+        ]
+        try:
+            buttons.append(
+                [
+                    InlineKeyboardButton(
+                        text="ᴄᴏʙᴀ ʟᴀɢɪ",
+                        url=f"https://t.me/{client.username}?start={message.command[1]}",
+                    )
+                ]
+            )
+        except IndexError:
+            pass
+        return buttons
+    if FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
+                InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
+            ],
+        ]
+        try:
+            buttons.append(
+                [
+                    InlineKeyboardButton(
+                        text="ᴄᴏʙᴀ ʟᴀɢɪ",
+                        url=f"https://t.me/{client.username}?start={message.command[1]}",
+                    )
+                ]
+            )
+        except IndexError:
+            pass
+        return buttons
